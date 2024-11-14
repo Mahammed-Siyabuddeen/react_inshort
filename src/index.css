@@ -1,13 +1,24 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.skelton-manual{
+  animation: skelton-animation 1s linear infinite alternate;
+  opacity: 7;
 }
+div::-webkit-scrollbar{
+  display: none;
+}
+@keyframes skelton-animation{
+  0%{
+    background:  hsl(200, 20%, 70%);
+  }
+  100%{
+    background: hsl(200, 20%, 95%);
+  }
+} 
